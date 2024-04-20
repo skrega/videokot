@@ -1,0 +1,49 @@
+.wrapper {
+    max-width: 450px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 38px 35px 38px 36px;
+    color: #fff;
+}
+
+.title {
+    color: #E71F2A;
+    margin-bottom: 33px;
+    text-align: center;
+}
+
+.cancel {
+    position: absolute;
+    top: 43px;
+    right: 33px;
+    cursor: pointer;
+
+    svg line {
+        transition: stroke .3s;
+    }
+}
+
+.inputWrapper {
+    margin-bottom: 15px;
+}
+
+.buttonWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.checkboxesWrapper {
+    color: #000;
+    margin-top: 22px;
+}
+
+@media(min-width: 1279px) {
+    .cancel:hover {
+        svg line {
+            stroke: #E71F2A;
+        }
+    }
+}

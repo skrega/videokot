@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_faq_items_faq_items",
+  "info": {
+    "displayName": "faqItems",
+    "icon": "question"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbar"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}

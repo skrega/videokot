@@ -1,0 +1,122 @@
+.table__title {
+    margin-bottom: 43px;
+}
+
+.table {
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-bottom: 90px;
+    border: 1px solid #E71F2A;
+    overflow: hidden;
+}
+
+.table__head {
+    background-color: #E71F2A;
+    padding: 9px 47px 11px;
+    text-align: center;
+
+    .table__col {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            border: 13px solid transparent;
+            border-top: 14px solid #E71F2A;
+            bottom: -30px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 18px;
+        }
+    }
+}
+
+.table__row {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: 402px 1fr 1fr 1fr 1fr;
+    grid-gap: 50px;
+}
+
+.table__content {
+    padding: 24px 47px 38px;
+
+
+    .table__col:not(:first-child) {
+        text-align: center;
+    }
+
+    .table__row:not(:first-child) {
+        padding-top: 15px;
+    }
+
+    .table__row:not(:last-child) {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #E71F2A;
+    }
+}
+
+@media (max-width: 1279px) {
+    .table__title {
+        margin-bottom: 26px;
+    }
+
+    .table {
+        margin-bottom: 70px;
+    }
+
+    .table__head {
+        padding: 6px 15px 5px;
+
+
+        .table__col {
+
+            &::before {
+                border-width: 8px;
+                border-top-width: 8px;
+                bottom: -19px;
+                width: 12px;
+            }
+        }
+    }
+
+    .table__content {
+        padding: 18px 15px 17px;
+    }
+
+    .table__row {
+        grid-template-columns: 309px 1fr 1fr 1fr 1fr;
+        grid-gap: 0px;
+    }
+}
+
+@media (max-width: 999px) {
+    .table__row {
+        grid-template-columns: 266px 1fr 1fr;
+    }
+
+    .table__head {
+        padding: 18px 15px;
+        .table__col:first-child{
+            text-align: left;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .table{
+        margin-bottom: 50px;
+    }
+    .table__title{
+        text-align: center;
+    }
+}
+@media (max-width: 640px) {
+    .table__row {
+        grid-template-columns: 183px 0.7fr 0.5fr;
+        font-size: 14px;
+        line-height: 19px;
+    }
+}

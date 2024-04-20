@@ -1,0 +1,19 @@
+.title {
+    margin-bottom: 18px;
+}
+
+.inputWrapper {
+    margin-bottom: 25px;
+}
+
+.buttonWrapper {
+    margin-top: 23px;
+}
+
+@media(max-width: 1279px) {
+
+    .inputWrapper {
+        margin-bottom: 18px;
+    }
+
+}

@@ -1,0 +1,86 @@
+version: "3"
+services:
+  strapi:
+    container_name: strapi
+    restart: unless-stopped
+    build:
+      context: ./strapi
+      dockerfile: Dockerfile
+      network: "host"
+    env_file: ./strapi/.env
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_HOST: strapiDB
+      DATABASE_PORT: 5432
+      DATABASE_NAME: videokot_db
+      DATABASE_USERNAME: postgres
+      DATABASE_PASSWORD: uuR=/O(46`"as%pZ9*fid1
+      APP_KEYS: cP/GGgTeJhLmeV5aS6pecQ==,Y/IF7krA/r1Q33lWM2MM1Q==,RYzbaw57A1ryfT0ZDZ5HZw==,9t1beUEaVkv32sS/Ip+ZOw==
+      ADMIN_JWT_SECRET: flTzBgL/FUoybCY2WdjSbw==
+      NODE_ENV: production
+      #MASTER_KEY: m7LpLc_BEXs7gs_xixiNK8wLxYunqXIjFUfK_fBDPpw
+    user: root
+    volumes:
+      - ./strapi/config:/opt/app/config
+      - ./strapi/src:/opt/app/src
+      - ./strapi/package.json:/opt/package.json
+      - ./strapi/package-lock.json:/opt/package-lock.json
+      - ./strapi/.env:/opt/app/.env
+      - ./strapi/public/uploads:/opt/app/public/uploads
+    ports:
+      - '1337:1337'
+    depends_on:
+      - strapiDB
+    networks:
+      - backend
+  web:
+    container_name: web
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    expose:
+      - '3000'
+    networks:
+      - frontend
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+      - "443:8080"
+      - "8080:8080"
+      - "8443:8080"
+    depends_on:
+      - web
+      - strapi
+    networks:
+      - frontend
+      - backend
+
+  strapiDB:
+    container_name: strapiDB
+    restart: unless-stopped
+    env_file: ./strapi/.env
+    image: postgres:16.1-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: uuR=/O(46`"as%pZ9*fid1
+      POSTGRES_DB: videokot_db
+    volumes:
+      - ./data:/var/lib/postgresql/data/
+
+    ports:
+      - "5432:5432"
+    networks:
+      - backend
+
+volumes:
+  strapi-data:
+
+networks:
+  frontend:
+    driver: bridge
+  backend:
+    driver: bridge

@@ -1,0 +1,143 @@
+.title {
+    margin-bottom: 76px;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+.inner {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.box {
+    padding: 60px 57px 57px 60px;
+    max-width: 557px;
+    width: 100%;
+    background: linear-gradient(64.06deg, #101010 17.32%, #E71F2A 100.75%);
+    border: 0.5px solid #9C9C9C;
+    position: relative;
+    overflow: hidden;
+
+    &__title {
+        font-weight: 500;
+        line-height: 31px;
+        padding-bottom: 14px;
+        margin-bottom: 19px;
+        border-bottom: 0.5px solid #FFFFFF
+    }
+
+    svg {
+        position: absolute;
+        right: -138px;
+        top: -85px;
+    }
+}
+
+.item {
+    align-items: center;
+    grid-gap: 35px;
+
+    &:not(:last-child) {
+        margin-bottom: 13px;
+    }
+
+    &__title {
+        max-width: 284px;
+        width: 100%;
+    }
+}
+
+.image {
+    width: 388px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+    border-radius: 68px 68px 0 0;
+    margin-bottom: -250px;
+    z-index: -1;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 1279px) {
+    .box {
+        max-width: 450px;
+        padding: 60px 43px 57px 54px;
+
+        svg {
+            right: -148px;
+            top: -105px;
+        }
+    }
+
+    .image {
+        margin-bottom: -200px;
+    }
+}
+
+@media (max-width: 999px) {
+
+    .box {
+        max-width: 390px;
+        padding: 27px 29px 45px;
+
+
+        svg {
+            right: -148px;
+            top: -105px;
+        }
+    }
+
+    .image {
+        width: 264px;
+        margin-bottom: -50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        padding: 60px 20px 56px 18px;
+        max-width: 100%;
+        margin-bottom: 30px;
+        &__title{
+            padding-bottom: 29px;
+            margin-bottom: 29px;
+        }   
+        svg{
+            right: -178px;
+            top: -105px;
+        }
+    }
+
+    .image {
+        width: 95%;
+        margin-bottom: -320px;
+    }
+    .title{
+        margin-bottom: 30px;
+    }
+
+    .item {
+        grid-gap: 24px;
+    
+        &:not(:last-child) {
+            margin-bottom: 18px;
+        }
+    
+        &__title {
+            max-width: 239px;
+        }
+    }
+}

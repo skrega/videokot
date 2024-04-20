@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Блог",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titleH1": {
+      "type": "string",
+      "required": true
+    },
+    "meta_title": {
+      "type": "string"
+    },
+    "meta_description": {
+      "type": "text"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "article",
+        "reviews",
+        "consultations"
+      ]
+    },
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "topText": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbar"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "twoColumns": {
+      "type": "boolean",
+      "default": true
+    },
+    "bottomPrimaryText": {
+      "type": "text"
+    },
+    "author": {
+      "type": "string"
+    },
+    "blogContent": {
+      "type": "dynamiczone",
+      "components": [
+        "blog-content.blog-content-additional",
+        "blog-content.blog-content"
+      ]
+    },
+    "shortDescription": {
+      "type": "string"
+    },
+    "topSubtitle": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "titleH1"
+    }
+  }
+}

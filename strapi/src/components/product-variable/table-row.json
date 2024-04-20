@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_product_variable_table_rows",
+  "info": {
+    "displayName": "tableRow",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "unit": {
+      "type": "string"
+    },
+    "count": {
+      "type": "integer"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "productOrServices": {
+      "type": "string"
+    }
+  }
+}

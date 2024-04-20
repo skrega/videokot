@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_main_info_main_infos",
+  "info": {
+    "displayName": "mainInfo",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "meta_title": {
+      "type": "string"
+    },
+    "meta_description": {
+      "type": "text"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

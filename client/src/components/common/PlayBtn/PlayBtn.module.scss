@@ -1,0 +1,33 @@
+.button{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D9D9D9;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+    svg path{
+        transition: fill .3s;
+    }
+    .button:active{
+        background-color: #b7000a;
+        svg path{
+            fill: #fff;
+        }
+    }
+}
+@media(min-width: 1279px){
+    .button:hover{
+        background-color: #E71F2A;
+        svg path{
+            fill: #fff;
+        }
+    }
+}

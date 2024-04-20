@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_complect_component_complect_components",
+  "info": {
+    "displayName": "complectComponent"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+
+    "titleOfProducts": {
+      "type": "string"
+    }
+  }
+}

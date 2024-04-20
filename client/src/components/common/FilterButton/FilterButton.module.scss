@@ -1,0 +1,18 @@
+.button {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+    font-weight: 500;
+    line-height: 25px;
+    color: #fff;
+    background-color: transparent;
+    svg path {
+        transition: fill .3s;
+    }
+    &:active{
+        color: #E71F2A;
+        svg path {
+            fill: #E71F2A;
+        }
+    }
+}

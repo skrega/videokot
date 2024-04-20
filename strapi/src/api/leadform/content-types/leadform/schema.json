@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "leadforms",
+  "info": {
+    "singularName": "leadform",
+    "pluralName": "leadforms",
+    "displayName": "Заявки",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email"
+    },
+    "comment": {
+      "type": "text"
+    },
+    "url": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    }
+  }
+}

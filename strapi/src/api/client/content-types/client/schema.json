@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "clients",
+  "info": {
+    "singularName": "client",
+    "pluralName": "clients",
+    "displayName": "Наши клиенты",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mainInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "main-info.main-info"
+    },
+    "clientsLogos": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "aboutClient": {
+      "displayName": "aboutClient",
+      "type": "component",
+      "repeatable": true,
+      "component": "about-client.about-client"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.popup {
+    background-image: url('../../../images/success-bg.jpeg');
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    max-width: 856px;
+    width: 100%;
+    padding: 119px 75px 86px;
+    border-radius: 15px;
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__text {
+        text-transform: uppercase;
+        p{
+            margin-bottom: 24px;
+        }
+    }
+}
+.cancel{
+    position: absolute;
+    right: 26px;
+    top: 30px;
+}

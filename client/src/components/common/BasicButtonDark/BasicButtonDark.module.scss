@@ -1,0 +1,43 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 45px 15px 53px;
+    border: 1px solid #000000;
+    border-radius: 32px;
+    grid-gap: 24px;
+    font-weight: 500;
+    font-size: 18px;
+    transition: all .3s;
+
+    svg {
+        transition: all .3s;
+    }
+
+    &:active {
+        background-color: #000;
+        color: #fff;
+        svg {
+            transform: translateX(3px);
+        }
+    }
+}
+
+@media (min-width: 1279px) {
+    .btn:hover {
+        background-color: #000;
+        color: #fff;
+
+        svg {
+            transform: translateX(3px);
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .btn {
+        font-size: 16px;
+        padding: 9px 30px;
+    }
+}

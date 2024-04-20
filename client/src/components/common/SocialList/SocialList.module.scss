@@ -1,0 +1,9 @@
+.socials{
+    display: flex;
+    align-items: center;
+    grid-gap: 8px;
+    
+    a:hover{
+        transform: translateY(-2px);
+    }
+}

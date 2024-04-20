@@ -1,0 +1,138 @@
+.text {
+    max-width: 1189px;
+    margin: 0 auto 66px;
+    width: 100%;
+    font-size: 30px;
+    line-height: 42px;
+
+    p:not(:last-child) {
+        margin-bottom: 50px;
+    }
+}
+
+.description {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 38px;
+    margin-bottom: 89px;
+}
+
+.img {
+    width: 100%;
+    height: 492px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.benefits {
+    background-color: #fff;
+    padding: 31px 53px 51px 43px;
+}
+
+.title {
+    margin-bottom: 9px;
+}
+
+.item {
+    display: flex;
+    align-items: flex-start;
+    grid-gap: 34px;
+    padding-bottom: 22px;
+    padding-top: 22px;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid #E71F2A;
+    }
+    &:first-child{
+        padding-top: 0;
+    }
+    &:last-child{
+        padding-bottom: 0;
+    }
+}
+
+@media(max-width: 1279px) {
+
+    .description {
+        grid-template-columns: 240px 1fr;
+        grid-gap: 30px;
+    }
+
+    .img {
+        height: 100%;
+    }
+
+    .benefits {
+        padding: 31px 23px 30px;
+    }
+
+    .title {
+        margin: 0 auto 30px;
+        max-width: 459px;
+        width: 100%;
+    }
+
+    .item {
+        padding-bottom: 18px;
+        padding-top: 18px;
+      
+    }
+}
+
+@media(max-width: 999px) {
+    .text{
+        margin-bottom: 27px;
+    }
+    .description {
+        grid-template-columns: 1fr;
+        grid-gap: 27px;
+        margin-bottom: 96px;
+    }
+
+    .img {
+        height: 394px;
+    }
+
+    .benefits {
+        padding: 31px 49px 51px;
+    }
+
+    .title {
+        max-width: 468px;
+    }
+
+    .item {
+        padding-bottom: 22px;
+        padding-top: 22px;
+    }
+}
+
+@media(max-width: 767px) {
+    .text{
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 30px;
+    }
+    .description {
+        grid-gap: 30px;
+        margin-bottom: 38px;
+    }
+
+    .img {
+        height: 247px;
+    }
+
+    .benefits {
+        padding: 37px 10px;
+    }
+
+    .title {
+        max-width: 320px;
+        margin-bottom: 33px;
+    }
+
+    .item {
+        padding-bottom: 25px;
+        padding-top: 25px;
+        grid-gap: 14px;
+    }
+}

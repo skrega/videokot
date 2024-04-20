@@ -1,0 +1,104 @@
+// для элемента input c type="radio" */
+.wrapper {
+    position: relative;
+}
+
+.label {
+    cursor: pointer;
+
+    input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    p {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+        font-size: 12px;
+        line-height: 14.4px;
+    }
+
+    p::before {
+        content: '';
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 1px solid #979797;
+        background-color: #D9D9D9;
+        border-radius: 3px;
+        margin-right: 13px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 9px;
+        transition: all .3s;
+    }
+
+    input:checked+p::before {
+        border-color: #D9D9D9;
+        background-color: #fff;
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4.33333L4.2 7L9 1" stroke="%23E71F2A" strokeLinecap="round" stroke-linejoin="round"/></svg>');
+
+    }
+
+    a:hover {
+        text-decoration: underline;
+
+    }
+}
+
+.checkbox {
+    transition: all .3s;
+
+    //стили при наведении курсора 
+    &:not(:disabled):not(:checked)+p:hover::before {
+        border-color: #E71F2A;
+    }
+
+    // стили для активной чекбокса (при нажатии на неё)
+    &:not(:disabled):active+p::before {
+        background-color: #fff;
+        border-color: #fff;
+    }
+
+    // стили для чекбокса, находящейся в фокусе
+    &:focus+p::before {
+        box-shadow: 0 0 0 0.2rem rgba(#fff, 0.25);
+    }
+
+    // стили для чекбокса, находящейся в фокусе и не находящейся в состоянии checked */
+    &:focus:not(:checked)+span::before {
+        background-color: #fff;
+    }
+
+    &:checked p::before {
+        background-color: #fff;
+    }
+}
+
+.error__label {
+    display: inline-block;
+    font-size: 11px;
+    position: absolute;
+    top: -28px;
+    left: 0;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #E71F2A;
+    padding: 5px 10px;
+    line-height: 1.1;
+    background: #E71F2A;
+    box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.3);
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 20px;
+        bottom: -10px;
+        border: 5px solid transparent;
+        border-top: 5px solid #E71F2A;
+    }
+}

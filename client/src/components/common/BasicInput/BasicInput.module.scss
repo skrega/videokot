@@ -1,0 +1,119 @@
+@use 'src/styles/use/colors.scss';
+
+.input__inner {
+    position: relative;
+}
+
+.label {
+    display: block;
+    margin-bottom: 12px;
+    color: #FFF9F9;
+
+    &.black {
+        color: #000;
+    }
+}
+
+.input {
+    background-color: #fff;
+    padding: 18px 30px;
+    border: 1px solid #fff;
+    width: 100%;
+    border-radius: 5px;
+
+    &:focus {
+        outline: none;
+    }
+
+    &::placeholder {
+        color: #979797;
+        transition: color .3s;
+    }
+
+    &:focus::placeholder,
+    &:hover::placeholder {
+        color: #000;
+    }
+
+    &.border {
+        border: 1px solid #979797;
+
+        &:focus {
+            border-color: #000;
+        }
+    }
+
+    &.error {
+        border-color: #d32f2f;
+
+        &::placeholder {
+            color: #d32f2f;
+        }
+    }
+}
+
+.error__text {
+    position: absolute;
+    width: 100%;
+    font-size: 12px;
+    margin-top: 5px;
+    line-height: 16px;
+    // opacity: 0.6;
+    color: #d32f2f;
+}
+.choose__file{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.file__btn{
+    background-color: #D9D9D9;
+    border-radius: 3px;
+    font-size: 10px;
+    line-height: 12px;
+    padding: 7px 22px;
+    display: inline-block;
+    color: #000;
+    transition: all .3s;
+    &:hover{
+        background-color: #E71F2A;
+        color: #fff;
+    }
+}
+// .file{
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+//     opacity: 0;
+//     cursor: pointer;
+// }
+
+.error__label{
+    display: inline-block;
+    font-size: 11px;
+    position: absolute;
+    top: -2px;
+    color: white;
+    border: 1px solid #E71F2A;
+    padding: 5px 10px;
+    line-height: 1.1;
+    background: #E71F2A;
+    box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.3);
+    &::after{
+        content: '';
+        position: absolute;
+        left: 20px;
+        bottom: -10px;
+        border: 5px solid transparent;
+        border-top: 5px solid #E71F2A;
+    }
+}
+@media (max-width: 1279px) {
+    .label {
+        margin-bottom: 4px;
+    }
+
+    .input {
+        padding: 11px 22px;
+    }
+}

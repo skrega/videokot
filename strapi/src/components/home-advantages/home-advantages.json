@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_home_advantages_home_advantages",
+  "info": {
+    "displayName": "HomeAdvantages",
+    "icon": "crown",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

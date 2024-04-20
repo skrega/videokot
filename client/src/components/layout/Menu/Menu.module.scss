@@ -1,0 +1,167 @@
+.menu {
+    &__wrapper {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 46px 134px 56px 45px;
+        max-width: 1020px;
+        width: 100%;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        grid-gap: 77px;
+        margin-bottom: 54px;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        grid-gap: 12px;
+        margin-bottom: 22px;
+    }
+
+    &__list li:not(:last-child) {
+        margin-bottom: 18px;
+    }
+}
+
+.menu__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 23px 10px;
+}
+
+.menu__tag {
+    background-color: #E71F2A;
+    border-radius: 31px;
+    padding: 8px 20px 8px 20px;
+    cursor: pointer;
+}
+
+.cancel {
+    position: absolute;
+    right: 43px;
+    top: 61px;
+}
+
+@media (min-width: 1279px) {
+    .menu__list li a:hover {
+        color: #E71F2A;
+    }
+
+    .menu__tag:hover {
+        background-color: #b7000a;
+    }
+}
+
+@media (max-width: 1279px) {
+    .menu__wrapper {
+        padding: 46px 94px 56px 45px;
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 999px) {
+    .menu {
+        &__wrapper {
+            padding: 46px 34px 46px;
+            max-width: 700px;
+            // overflow-y: scroll;
+            // height: 590px;
+        }
+
+        &__inner {
+            grid-gap: 38px;
+        }
+    }
+
+    .menu__tags {
+        gap: 10px;
+    }
+
+    .cancel {
+        top: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .menu {
+        &__wrapper {
+
+            padding: 27px 19px 30px 30px;
+            width: 360px;
+            overflow-y: scroll;
+            height: 725px;
+        }
+
+        &__inner {
+            margin-top: 24px;
+            grid-gap: 24px;
+            flex-direction: column;
+            margin-bottom: 45px;
+        }
+        &__item{
+            width: 100%;
+        }
+        &__list {
+            opacity: 0;
+            min-height: 0;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+            transition: all .3s;
+        }
+
+        &__title {
+            position: relative;
+            margin-bottom: 0px;
+            width: 100%;
+            &::before {
+                content: '';
+                position: absolute;
+                right: 0;
+                width: 14px;
+                height: 8px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6551 0.10327C12.7208 0.0370202 12.8103 -0.000244141 12.9036 -0.000244141C12.9969 -0.000244141 13.0864 0.0370202 13.1521 0.10327L13.894 0.845157C13.9616 0.908661 14 0.997324 14 1.09012C14 1.18292 13.9616 1.27158 13.894 1.33508L7.46193 7.76711C7.36358 7.86558 7.23016 7.92096 7.09099 7.92108H6.90901C6.76984 7.92096 6.63642 7.86558 6.53807 7.76711L0.106047 1.33508C0.0383835 1.27158 9.53674e-07 1.18292 9.53674e-07 1.09012C9.53674e-07 0.997324 0.0383835 0.908661 0.106047 0.845157L0.847934 0.10327C0.913642 0.0370202 1.00309 -0.000244141 1.0964 -0.000244141C1.18971 -0.000244141 1.27915 0.0370202 1.34486 0.10327L7 5.75841L12.6551 0.10327Z' fill='black'/%3E%3C/svg%3E%0A");
+                transition: transform .3s;
+            }
+            &.opened::before{
+                transform: matrix(1, 0, 0, -1, 0, 0);
+            }
+            &.opened+ .menu__list{
+                margin-top: 22px;
+                margin-bottom: 6px;
+                min-height: max-content;
+                height: auto;
+                opacity: 1;
+                z-index: 1;
+                visibility: visible;
+            }
+        }
+
+        &__footer {
+            ul {
+                margin-top: 28px;
+            }
+
+            li svg path {
+                fill: #E71F2A;
+            }
+
+            // a {
+            //     color: #000;
+            // }
+        }
+    }
+
+
+    .cancel {
+        top: 35px;
+        right: 19px;
+    }
+}

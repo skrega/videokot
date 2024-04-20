@@ -1,0 +1,32 @@
+@import '../../../../styles/use/colors.scss';
+
+.button {
+    padding: 14px 22px 14px 25px;
+    display: flex;
+    align-items: center;
+    grid-gap: 11px;
+    background-color: $primary;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0%;
+
+    &:hover {
+        background-color: #b7000a;
+    }
+}
+
+@media (max-width: 767px) {
+    .button {
+        padding: 10px 14px;
+        font-size: 16px;
+        line-height: 19px;
+
+        svg {
+            width: 11px;
+            height: 11px;
+        }
+    }
+}

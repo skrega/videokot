@@ -1,0 +1,37 @@
+.items {
+    gap: 40px;
+}
+
+.inner__btn {
+    margin-top: 120px;
+}
+
+@media(max-width:1279px) {
+    .items {
+        gap: 40px 30px;
+    }
+
+    .inner__btn {
+        margin-top: 118px;
+    }
+}
+
+@media(max-width:999px) {
+    .items {
+        gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media(max-width:767px) {
+
+    .items {
+        margin-top: 30px;
+        gap: 6px;
+    }
+
+    .inner__btn {
+        margin-top: 70px;
+    }
+}

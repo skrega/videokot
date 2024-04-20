@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_about_category_about_categories",
+  "info": {
+    "displayName": "aboutCategory",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbar"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "benefits": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home-advantages.home-advantages"
+    },
+    "titleBenefits": {
+      "type": "string"
+    },
+    "img": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

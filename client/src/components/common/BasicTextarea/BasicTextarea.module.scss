@@ -1,0 +1,40 @@
+.textarea {
+    padding: 18px 30px;
+    height: 75px;
+    resize: none;
+    border-radius: 5px;
+    width: 100%;
+
+    &.border {
+        border: 1px solid #979797;
+
+        &:focus {
+            border-color: #000;
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &::placeholder {
+        color: #979797;
+        transition: color .3s;
+    }
+
+    &:focus::placeholder,
+    &:hover::placeholder {
+        color: #000;
+    }
+
+}
+
+.label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #FFF9F9;
+
+    &.black {
+        color: #000;
+    }
+}

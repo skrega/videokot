@@ -1,0 +1,248 @@
+@import '../../../../styles/use/colors.scss';
+
+.background {
+    top: 0;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 747px;
+}
+
+.banner {
+    &__inner {
+        color: #fff;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__title {
+        max-width: 751px;
+        width: 100%;
+        font-size: 64px;
+        font-weight: 600;
+        line-height: 141%;
+        text-align: left;
+    }
+
+    &__content {
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 48px;
+    }
+
+}
+
+.bannerItem {
+    padding: 17px 20px;
+    display: flex;
+    align-items: center;
+    grid-gap: 20px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #FFFFFF;
+        filter: blur(0.1px) drop-shadow(0px 0px 1px #FFFFFF) drop-shadow(0px 0px 4px #FFFFFF);
+        border-radius: inherit;
+
+    }
+
+    &:first-child {
+        border-radius: 5px 5px 0 0;
+    }
+
+    &:last-child {
+        border-radius: 0 0 5px 5px;
+    }
+
+    &__text {
+        width: 240px;
+
+        span {
+            color: $primary;
+            font-weight: 600;
+        }
+    }
+}
+
+.bannerBtnWrapper {
+    position: relative;
+    margin-bottom: 40px;
+    width: 100%;
+
+    button {
+        position: absolute;
+        bottom: 61px;
+        left: 68px;
+    }
+}
+
+.image {
+    border-radius: 30px;
+}
+
+@media only screen and (max-height: 900px) {}
+
+
+@media (max-width: 1279px) {
+    .background {
+        height: 721px;
+    }
+
+    // .background {
+    //     min-height: 721px;
+    // }
+
+    .banner {
+        &__title {
+            max-width: 510px;
+            font-size: 56px;
+            line-height: 79px;
+        }
+
+        &__content {
+            margin-bottom: 34px;
+        }
+    }
+
+    .bannerItem {
+        padding: 17px 18px;
+
+        &__text {
+            width: 235px;
+        }
+    }
+
+    .bannerBtnWrapper {
+        margin-bottom: 46px;
+        height: 376px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        button {
+            position: absolute;
+            bottom: 20px;
+            left: 60px;
+        }
+    }
+
+
+}
+
+@media (max-width: 999px) {
+    .wrapper {
+        height: 854px;
+    }
+
+    .background {
+        // min-height: 854px;
+        height: 100%;
+        margin-bottom: 20px;
+    }
+
+    .banner {
+        &__title {
+            max-width: 616px;
+            font-size: 54px;
+            line-height: 76px;
+        }
+
+        &__content {
+            margin-bottom: 34px;
+        }
+    }
+
+    .bannerItem {
+        padding: 17px 18px;
+        width: 100%;
+        &__text {
+            width: 235px;
+        }
+    }
+
+    .bannerBtnWrapper {
+        margin-bottom: 30px;
+        height: 301px;
+
+        button {
+            position: absolute;
+            bottom: 26px;
+            left: 19px;
+        }
+    }
+
+    .banner__items {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .wrapper{
+        height: 667px;
+    }
+    .background {
+        // min-height: auto;
+        background-size: cover;
+        height: 667px;
+        margin-bottom: 25px;
+        background-size: cover;
+    }
+
+    .banner {
+        &__title {
+            max-width: 305px;
+            font-size: 32px;
+            line-height: 45px;
+        }
+
+        &__content {
+            margin-bottom: 15px;
+        }
+    }
+
+    .bannerItem {
+        &::before {
+
+            filter: blur(0.1px) drop-shadow(0px 0px 1px rgba(#FFFFFF, 0.8)) drop-shadow(0px 0px 4px rgba(#FFFFFF, 0.8));
+
+        }
+    }
+
+    .bannerBtnWrapper {
+        height: 239px;
+        border-radius: 5px;
+
+        img {
+            object-fit: cover;
+        }
+
+        button {
+            position: absolute;
+            bottom: 35px;
+            left: 0px;
+            right: 0;
+            margin: 0 auto;
+            width: max-content;
+            padding-right: 50px;
+            padding-left: 40px;
+
+            svg {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+
+    .banner__items {
+        flex-direction: column;
+    }
+}

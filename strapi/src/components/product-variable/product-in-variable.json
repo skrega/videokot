@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_product_variable_product_in_variables",
+  "info": {
+    "displayName": "productInVariable",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "textPrice": {
+      "type": "string"
+    },
+    "count": {
+      "type": "integer"
+    },
+    "productTitle": {
+      "type": "string"
+    },
+    "text": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbarBalloon"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}

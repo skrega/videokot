@@ -1,0 +1,105 @@
+{
+  "kind": "singleType",
+  "collectionName": "main_pages",
+  "info": {
+    "singularName": "main-page",
+    "pluralName": "main-pages",
+    "displayName": "Главная страница",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "meta_title": {
+      "type": "string"
+    },
+    "meta_description": {
+      "type": "text"
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "bannerImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "homeServices": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home-services.home-services"
+    },
+    "homeAdvantages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home-advantages.home-advantages",
+      "max": 2
+    },
+    "aboutTitle": {
+      "type": "string"
+    },
+    "aboutItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home-about-items.home-about-itesm"
+    },
+    "aboutText": {
+      "type": "text"
+    },
+    "aboutImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "titleCase": {
+      "type": "string"
+    },
+    "homeCases": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home-cases.home-cases"
+    },
+    "qualityTitle": {
+      "type": "string"
+    },
+    "benefitsTitle": {
+      "type": "string"
+    },
+    "homeBenefits": {
+      "displayName": "benefitsItems",
+      "type": "component",
+      "repeatable": true,
+      "component": "benefits-items.benefits-items"
+    },
+    "qualityItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home-quality.home-quality"
+    },
+    "blogTitle": {
+      "type": "string"
+    },
+    "homeBlogItems": {
+      "displayName": "homeBlogItems",
+      "type": "component",
+      "repeatable": true,
+      "component": "home-blog-items.home-blog-items"
+    }
+  }
+}

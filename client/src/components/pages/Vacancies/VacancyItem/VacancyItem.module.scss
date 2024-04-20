@@ -1,0 +1,127 @@
+.item {
+    padding: 60px 60px 30px;
+    background: linear-gradient(61.42deg, #101010 -4.77%, #E71F2A 156.32%);
+    border: 0.5px solid #595959;
+
+    &__title {
+        margin-bottom: 19px;
+        padding-bottom: 20px;
+        border-bottom: 0.5px solid #fff;
+    }
+
+    &__price {
+        margin-bottom: 20px;
+    }
+
+    &__content {
+        max-width: 282px;
+        width: 100%;
+        margin-bottom: 33px;
+    }
+
+    &__subtitle:first-child {
+        margin-bottom: 20px;
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        grid-gap: 12px;
+    }
+}
+
+@media(max-width: 1279px) {
+    .item {
+        padding: 62px 28px 32px;
+        &__title{
+            margin-bottom: 8px;
+        }
+        &__price {
+            margin-bottom: 25px;
+        }
+
+        &__content {
+            margin-bottom: 20px;
+        }
+
+        &__buttons {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            grid-gap: 12px;
+            a,
+            button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        &__btn {
+            width: 100%;
+        }
+    }
+}
+
+@media(max-width: 999px) {
+    .item {
+     
+        &__price {
+            margin-bottom: 25px;
+        }
+
+        &__content {
+            margin-bottom: 20px;
+        }
+
+        &__buttons {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            a,
+            button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        &__btn {
+            width: 100%;
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .item {
+        padding: 42px 14px 46px;
+        &__title{
+            margin-bottom: 20px;
+        }
+        &__price {
+            margin-bottom: 20px;
+        }
+
+        &__content {
+            margin-bottom: 30px;
+        }
+
+        &__buttons {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 0 22px;
+            a,
+            button {
+                width: 100%;
+                justify-content: center;
+                svg {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+
+        &__btn {
+            width: 100%;
+        }
+    }
+}

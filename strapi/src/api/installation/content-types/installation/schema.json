@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "installations",
+  "info": {
+    "singularName": "installation",
+    "pluralName": "installations",
+    "displayName": "Установка и монтаж",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "installationItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home-about-items.home-about-itesm"
+    },
+    "mainInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "main-info.main-info"
+    },
+    "text": {
+      "type": "text"
+    }
+  }
+}

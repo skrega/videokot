@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_charateristcs_charateristcs",
+  "info": {
+    "displayName": "charateristcs"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    }
+  }
+}

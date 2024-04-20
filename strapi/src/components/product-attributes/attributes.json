@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_product_attributes_attributes",
+  "info": {
+    "displayName": "attributes",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "isFilter": {
+      "type": "boolean"
+    }
+  }
+}

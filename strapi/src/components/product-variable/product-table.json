@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_product_variable_product_tables",
+  "info": {
+    "displayName": "productTable",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titleTable": {
+      "type": "string"
+    },
+    "tableRow": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product-variable.table-row"
+    }
+  }
+}

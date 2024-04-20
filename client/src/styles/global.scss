@@ -1,0 +1,490 @@
+@import 'vendor/normalize.css';
+@import 'use/colors.scss';
+@import 'reset';
+@import 'common/popups.scss';
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Exo 2';
+    font-size: 16px;
+    line-height: 22.56px;
+}
+
+#__next {
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+
+.header-bg header {
+    background-image: url(../images/header-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 60px;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.container {
+    max-width: 1190px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.container-fluid{
+    max-width: 1655px;
+    width: 100%;
+    padding: 0 25px;
+    margin: 0 auto;
+}
+
+button {
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.title {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 83.47px;
+
+    span {
+        color: $primary;
+    }
+}
+
+.title-l {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 85px;
+}
+
+.title-md {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.text-l {
+    font-size: 32px;
+    line-height: 38px;
+}
+
+.color-primary {
+    color: $primary;
+}
+
+.text {
+    font-size: 18px;
+    line-height: 25.38px;
+}
+
+.color-white {
+    color: #fff;
+}
+
+.btn-primary {
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    background: #E71F2A;
+    border-radius: 32px;
+    padding: 16px 16px 16px 30px;
+    grid-gap: 24px;
+    display: inline-flex;
+    align-items: center;
+    transition: background 0.5s ease 0s, filter 0.5s ease 0s;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    svg {
+        transition: all .3s;
+    }
+
+    &:hover,
+    &:active {
+        filter: none;
+        background-color: #b7000a;
+
+        svg {
+            transform: translateX(2px);
+        }
+    }
+}
+
+.btn-outline {
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    background-color: transparent;
+    border-radius: 32px;
+    padding: 15px 16px 15px 24px;
+    grid-gap: 24px;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #fff;
+    transition: background 0.5s ease 0s;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    svg {
+        transition: transform .3s;
+    }
+    svg circle {
+        transition: fill .3s;
+    }
+
+    svg path {
+        transition: fill .3s;
+    }
+}
+
+.mb-3 {
+    margin-bottom: 35px;
+}
+
+.mb-7 {
+    margin-bottom: 70px;
+}
+
+.section {
+    margin-bottom: 120px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+}
+
+.br-15 {
+    border-radius: 15px;
+}
+
+.popup-overlay {
+    display: block;
+    overflow-y: visible;
+    overflow-x: hidden;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.close {
+    cursor: pointer;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.s-bold {
+    font-weight: 600;
+}
+
+.bolder {
+    font-weight: 700;
+}
+
+.item__number {
+    color: #FFF;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 26px;
+    background: #E71F2A;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+}
+
+.bg-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.swiper-btn {
+    z-index: 2;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(#FFFFFF, 0.9);
+    transition: all .3s;
+    cursor: pointer;
+
+    // filter: blur(0.5px) drop-shadow(0px 0px 50px #FFFFFF) drop-shadow(0px 0px 25px #FFFFFF) drop-shadow(0px 0px 10px #FFFFFF);
+
+    &:active {
+        transform: translateY(2px);
+    }
+
+    @media(min-width: 1279px) {
+        &:hover {
+            box-shadow: 0px 0px 10px rgba(#FFFFFF, 0);
+            // filter: blur(0.5px) drop-shadow(0px 0px 1px rgba(#FFFFFF, 0.2)) drop-shadow(0px 0px 5px rgba(#FFFFFF, 0.2)) drop-shadow(0px 0px 5px rgba(#FFFFFF, 0.2));
+        }
+    }
+}
+
+.list li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    grid-gap: 21px;
+
+    &:not(:last-child) {
+        margin-bottom: 25px;
+    }
+
+    &::before {
+        content: '';
+        flex-shrink: 0;
+        flex-grow: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #E71F2A;
+    }
+}
+
+.tabs {
+    grid-gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.tab {
+    padding: 9px 32px;
+    font-size: 14px;
+    line-height: 21px;
+    background-color: #fff;
+    border-radius: 31px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .3s;
+
+    &.active {
+        background-color: $primary;
+        color: #fff;
+    }
+}
+
+.empty__text {
+    margin-top: 50px;
+}
+
+.center-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text-sm{
+    font-size: 14px;
+    line-height: 19px;
+}
+// .socials {
+//     a:hover {
+//         transform: translateY(-3px);
+//     }
+// }
+.bg-archive {
+    background-image: url('../images/blog-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    mix-blend-mode: multiply;
+    height: max-content;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media(min-width: 1279px) {
+    .close:hover {
+        svg line {
+            stroke: #E71F2A;
+        }
+    }
+
+    .tab.active:hover {
+        pointer-events: none;
+    }
+
+    .tab:not(.active):hover {
+        background-color: #b7000a;
+        color: #fff;
+    }
+
+    .btn-outline:hover {
+        background-color: #fff;
+        color: #000;
+        svg {
+            transform: translateX(2px);
+        }
+        svg circle {
+            fill: #000;
+        }
+
+        svg path {
+            fill: #fff;
+        }
+    }
+}
+
+@media (max-width: 1279px) {
+    .container,
+    .container-fluid {
+        max-width: 903px;
+    }
+    .container-fluid{
+        padding: 0 15px;
+    }
+    .title {
+        font-size: 46px;
+        line-height: 64px;
+    }
+
+    .title-l {
+        font-size: 56px;
+        line-height: 79px;
+    }
+
+    .mb-3 {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 999px) {
+    .container,
+    .container-fluid {
+        max-width: 720px;
+    }
+
+    .title-l {
+        font-size: 54px;
+        line-height: 76px;
+    }
+
+    .section {
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    header.background-image {
+        margin-bottom: 30px;
+    }
+
+    .btn-primary {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 10px 29px 10px 21px;
+        svg {
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    .title {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .title-md {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .text {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .title-l {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .section {
+        margin-bottom: 70px;
+    }
+
+    .br-15 {
+        border-radius: 5px;
+    }
+
+    .mb-7 {
+        margin-bottom: 30px;
+    }
+
+    .mb-3 {
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        padding: 9px 21px 9px 29px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .text-l {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .swiper-btn {
+        width: 45px;
+        height: 45px;
+
+        svg {
+            width: 33px;
+            height: 33px;
+        }
+    }
+}

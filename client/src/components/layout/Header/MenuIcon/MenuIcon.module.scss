@@ -1,0 +1,39 @@
+.button {
+    margin-left: 20px;
+    position: relative;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background-color: transparent;
+    grid-gap: 15px;
+    padding: 0;
+    position: relative;
+
+    &::before {
+        content: '';
+        background: #D9D9D9;
+        border: 0.5px solid #FFFFFF;
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        filter: blur(22.5px);
+        top: 50%;
+        right: 13px;
+        transform: translate(0, -50%);
+    }
+}
+
+@media (max-width: 767px) {
+    .button {
+        font-size: 0;
+        margin-left: 0px;
+        grid-gap: 0;
+        width: 40px;
+        height: 40px;
+
+        &::before {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_table_tables",
+  "info": {
+    "displayName": "table",
+    "icon": "calendar",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "columnName": {
+      "type": "string"
+    },
+    "listBenefits": {
+      "type": "component",
+      "repeatable": true,
+      "component": "list-item.list"
+    },
+    "listFlaws": {
+      "type": "component",
+      "repeatable": true,
+      "component": "list-item.list"
+    }
+  }
+}
